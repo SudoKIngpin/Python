@@ -1,3 +1,10 @@
+*.gitignore
+*.gitattributes
+*.pdf
+*.pptx
+*.exe
+*.txt
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
