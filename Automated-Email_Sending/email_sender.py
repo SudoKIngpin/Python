@@ -3,15 +3,19 @@ import smtplib
 def send_emails(emails):
     server=smtplib.SMTP('smtp.gmail.com',587)
     server.ehlo()
-    server.starttls()
+    server.starttls() #Transport Layer Secuirity
 
     sender_email='astinaam@gmail.com'
-    password=input('Input Passwod : ')
+    password=input('Enter Password : ')
     try:
         server.login(sender_email,password)
-        print('login successful')
+        print('Login Successful')
     except:
         print('Failed Autentication.')
+        
+        print("Please enable access to less secure apps from link given below ")
+        
+        print("https://myaccount.google.com/u/0/lesssecureapps")
         
     for name in emails:
         print('sending..')
